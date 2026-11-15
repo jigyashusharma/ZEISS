@@ -1,0 +1,860 @@
+﻿<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FerbDora's Lab â€” Lighter. Cheaper. Buildable the same day.</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#fea619",
+            "inverse-surface": "#283044",
+            "on-error-container": "#93000a",
+            "tertiary": "#b61722",
+            "surface-container-high": "#e2e7ff",
+            "error-container": "#ffdad6",
+            "surface-container": "#eaedff",
+            "tertiary-fixed": "#ffdad7",
+            "tertiary-container": "#da3437",
+            "surface-dim": "#d2d9f4",
+            "surface-variant": "#dae2fd",
+            "secondary-fixed": "#ffddb8",
+            "on-tertiary-fixed-variant": "#930013",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#410004",
+            "on-secondary-fixed-variant": "#653e00",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#001d31",
+            "on-tertiary-container": "#fffbff",
+            "surface-container-highest": "#dae2fd",
+            "primary": "#006194",
+            "inverse-primary": "#93ccff",
+            "primary-container": "#007bb9",
+            "outline": "#707881",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-primary": "#ffffff",
+            "outline-variant": "#bfc7d2",
+            "on-secondary-fixed": "#2a1700",
+            "surface-tint": "#006398",
+            "on-background": "#131b2e",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed-dim": "#93ccff",
+            "primary-fixed": "#cce5ff",
+            "inverse-on-surface": "#eef0ff",
+            "secondary": "#855300",
+            "on-primary-fixed-variant": "#004b73",
+            "surface-container-low": "#f2f3ff",
+            "surface-bright": "#faf8ff",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "on-secondary": "#ffffff",
+            "surface": "#faf8ff",
+            "background": "#faf8ff",
+            "on-primary-container": "#fdfcff",
+            "on-surface-variant": "#3f4850",
+            "on-secondary-container": "#684000",
+            "on-surface": "#131b2e"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-mobile": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display": ["Outfit"],
+            "headline-lg-mobile": ["Outfit"],
+            "headline-sm": ["Outfit"],
+            "headline-lg": ["Outfit"],
+            "headline-md": ["Outfit"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-soft {
+      box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
+    }
+    .shadow-elevated {
+      box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    }
+    .shadow-glow {
+      box-shadow: 0 4px 14px rgba(0, 97, 148, 0.28);
+    }
+    .blueprint-grid {
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 97, 148, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 97, 148, 0.05) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar (Derived from Shared Component TopNavBar) -->
+<header class="sticky top-0 z-50 bg-surface-container-lowest shadow-sm backdrop-blur-md bg-opacity-95">
+<div class="w-full px-8 py-3 flex items-center justify-between mx-auto max-w-7xl">
+<!-- Brand Logo & Tagline -->
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-3 group" href="#">
+<!-- Doraemon's 4D Pocket Badge -->
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center relative shadow-sm group-hover:scale-105 transition-transform duration-200">
+<!-- 4D Pocket curve visual -->
+<div class="w-6 h-3 bg-surface-container-lowest rounded-b-full border-t border-surface-container-lowest"></div>
+<!-- Gadget Bell Accent -->
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary-container rounded-full border-2 border-surface-container-lowest flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary-container"></span>
+</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Â FerbDora'sÂ <br/>Lab</span>
+</a>
+<!-- Tagline Pill -->
+<div class="hidden lg:inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span>Lighter. Cheaper. Buildable the same day.</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-lg hover:text-primary transition-colors duration-150" href="#how-it-works">Explore Templates</a>
+<a class="text-on-surface-variant font-medium font-label-lg hover:text-primary transition-colors duration-150" href="#workshop-community">Workshop Community</a>
+<a class="text-on-surface-variant font-medium font-label-lg hover:text-primary transition-colors duration-150" href="#saved-projects">Saved Projects</a>
+</nav>
+<!-- Trailing Primary & Icon Actions -->
+<div class="flex items-center space-x-3">
+<button class="p-2 text-on-surface-variant hover:text-primary rounded-full hover:bg-surface-container transition-colors duration-150 relative">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<a class="hidden sm:inline-flex text-on-surface-variant font-label-lg px-3 py-2 rounded-full hover:text-primary transition-colors" href="#demo">
+          Sign In
+        </a>
+<a class="inline-flex items-center space-x-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-lg shadow-sm shadow-glow hover:bg-primary-container active:scale-[0.98] transition-all duration-150" href="#start">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New Design</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 overflow-hidden blueprint-grid">
+<!-- Soft Decorative Ambient Glows -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary-fixed opacity-40 blur-3xl rounded-full pointer-events-none"></div>
+<div class="absolute top-48 right-12 w-64 h-64 bg-secondary-fixed opacity-30 blur-2xl rounded-full pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-8 relative">
+<!-- Top Announcement & Badges -->
+<div class="flex flex-wrap items-center gap-2.5 mb-6">
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-primary font-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" data-weight="fill" style='font-variation-settings: "FILL" 1;'>bolt</span>
+<span>Sub-second ML Structural Surrogate</span>
+</span>
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+<span>40%+ Average Material Trimmed</span>
+</span>
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">pedal_bike</span>
+<span>Same-Day Local Sourcing</span>
+</span>
+</div>
+<!-- Main Headline & Subtitle Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6">
+<h1 class="font-display text-display text-on-surface tracking-tight">
+            Smarter Designs. <br class="hidden sm:inline"/>
+<span class="text-primary relative inline-block">
+              Less Material.
+              <!-- Underline Hand-drawn Swoop -->
+<svg class="absolute -bottom-2 left-0 w-full h-3 text-secondary-container" fill="none" preserveaspectratio="none" viewbox="0 0 250 12">
+<path d="M3 9C60 3 180 3 247 8" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</span><br/>
+            Built Today.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">FerbDora's Lab is the AI frugal design assistant that trims excess material from everyday products while guaranteeing structural strength â€” then maps where to buy cheaper local materials within minutes.</p>
+<!-- CTAs & Micro-trust -->
+<div class="pt-2 flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center space-x-2 bg-primary text-on-primary px-8 py-3.5 rounded-full font-label-lg shadow-glow hover:bg-primary-container active:scale-[0.98] transition-all" href="#start">
+<span>Start Designing Free</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center space-x-2 bg-surface-container-lowest text-on-surface-variant border border-outline-variant px-6 py-3.5 rounded-full font-label-lg hover:bg-surface-container hover:text-primary transition-all" href="#templates">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span>Watch 1-Min Demo</span>
+</a>
+</div>
+<!-- Micro Proof Line -->
+<div class="pt-4 flex items-center space-x-6 text-on-surface-variant font-label-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>ISO 7173 Structural Verification</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]">hardware</span>
+<span>Grassroots Maker Ready</span>
+</div>
+</div>
+</div>
+<!-- Interactive Hero Telemetry Card (Comparison) -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-elevated relative overflow-hidden">
+<div class="flex items-center justify-between border-b border-surface-container pb-4 mb-4">
+<div class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Live Optimization Sandbox</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm">
+                42% Material Cut
+              </span>
+</div>
+<!-- Comparison Preview Split -->
+<div class="grid grid-cols-2 gap-4 mb-4">
+<!-- Overbuilt Card -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/60 relative opacity-85">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-on-surface-variant font-semibold">Standard CAD</span>
+<span class="text-tertiary font-label-sm font-bold">Wasteful</span>
+</div>
+<div class="h-28 rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden border border-outline-variant/40">
+<span class="material-symbols-outlined text-outline text-5xl">chair_alt</span>
+<div class="absolute bottom-1 right-1 text-[10px] bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface-variant">Solid Oak</div>
+</div>
+<div class="mt-3 space-y-1 font-body-sm text-on-surface-variant">
+<div class="flex justify-between"><span>Weight:</span> <strong class="text-on-surface">4.80 kg</strong></div>
+<div class="flex justify-between"><span>Cost:</span> <strong class="text-on-surface">â‚¹38.00</strong></div>
+<div class="flex justify-between"><span>FEA Factor:</span> <span>3.8x (Excess)</span></div>
+</div>
+</div>
+<!-- Frugal Optimized Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 border-2 border-primary relative shadow-soft">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-primary font-bold">FerbDora Frugal</span>
+<span class="text-secondary font-label-sm font-bold bg-secondary-fixed px-1.5 py-0.5 rounded">Optimized</span>
+</div>
+<div class="h-28 rounded-lg bg-primary-fixed/30 flex items-center justify-center relative overflow-hidden border border-primary/20">
+<span class="material-symbols-outlined text-primary text-5xl">chair</span>
+<!-- Micro Lattice Truss overlay hint -->
+<div class="absolute inset-0 bg-[radial-gradient(#006194_1px,transparent_1px)] [background-size:8px_8px] opacity-25"></div>
+<div class="absolute bottom-1 right-1 text-[10px] bg-primary text-on-primary px-1.5 py-0.5 rounded font-label-sm">Pallet + Birch</div>
+</div>
+<div class="mt-3 space-y-1 font-body-sm text-on-surface-variant">
+<div class="flex justify-between"><span>Weight:</span> <strong class="text-primary font-bold">2.78 kg (-42%)</strong></div>
+<div class="flex justify-between"><span>Cost:</span> <strong class="text-primary font-bold">â‚¹19.50 (-48%)</strong></div>
+<div class="flex justify-between"><span>FEA Factor:</span> <span class="text-on-surface font-semibold">2.2x Safe</span></div>
+</div>
+</div>
+</div>
+<!-- Real-time Sourcing Geopin Drawer -->
+<div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface font-semibold">Ready to cut today at Maker Yard</p>
+<p class="font-body-sm text-on-surface-variant text-[12px]">0.8 mi away â€¢ 3 salvaged timber offcuts in stock</p>
+</div>
+</div>
+<span class="font-label-sm font-bold text-primary bg-surface-container-lowest px-2.5 py-1 rounded-full border border-primary/30">
+                12 min bike
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact & Frugal Tech Metrics Bar -->
+<section class="bg-surface-container-lowest border-y border-outline-variant py-8 shadow-sm">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x-0 md:divide-x divide-outline-variant">
+<div class="text-center px-4">
+<p class="font-display text-4xl text-primary font-extrabold tracking-tight">42%</p>
+<p class="font-label-lg text-on-surface font-semibold mt-1">Average Mass Saved</p>
+<p class="font-body-sm text-on-surface-variant text-[13px] mt-0.5">Eliminating unworked material dead-zones</p>
+</div>
+<div class="text-center px-4">
+<p class="font-display text-4xl text-secondary-container font-extrabold tracking-tight">â‚¹18.50</p>
+<p class="font-label-lg text-on-surface font-semibold mt-1">Cost Saved per Build</p>
+<p class="font-body-sm text-on-surface-variant text-[13px] mt-0.5">Substituted with standard local hardware</p>
+</div>
+<div class="text-center px-4">
+<p class="font-display text-4xl text-primary font-extrabold tracking-tight">&lt; 1.4s</p>
+<p class="font-label-lg text-on-surface font-semibold mt-1">Instant FEA Surrogate</p>
+<p class="font-body-sm text-on-surface-variant text-[13px] mt-0.5">ML neural net vs 45-min legacy meshes</p>
+</div>
+<div class="text-center px-4">
+<p class="font-display text-4xl text-on-surface font-extrabold tracking-tight">100%</p>
+<p class="font-label-lg text-on-surface font-semibold mt-1">Retained Strength</p>
+<p class="font-body-sm text-on-surface-variant text-[13px] mt-0.5">Verified Safety Factor &gt; 2.0x standard</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Core Problem vs. The Frugal Solution (AFI Theme) -->
+<section class="py-20 bg-background" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-2xl mx-auto text-center mb-16">
+<span class="font-label-md uppercase tracking-wider text-primary font-bold">The Frugal Innovation Imperative</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Over-Engineering is Stealing Maker Potential</h2>
+<p class="font-body-md text-on-surface-variant mt-3">
+          Traditional engineering software was built for mass automotive lines and aerospace giants. Everyday community makers get stuck with bulky parts, expensive stock, and zero local sourcing guidance.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Challenge Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant shadow-soft relative overflow-hidden">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[28px]">trending_down</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">The Overbuilt Status Quo</h3>
+<p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Designers overbuild for safety by pouring solid material into parts, simply because FEA simulation takes hours to configure. Small makers end up purchasing overpriced virgin lumber and metal profiles, unaware that scrap trusses can withstand identical mechanical stress.
+          </p>
+<ul class="space-y-3 font-body-sm text-on-surface">
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-tertiary text-[20px]">close</span>
+<span>45+ minute simulation wait times per iteration</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-tertiary text-[20px]">close</span>
+<span>Rigid reliance on bespoke virgin industrial stock</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-tertiary text-[20px]">close</span>
+<span>Weeks of shipping latency from centralized online vendors</span>
+</li>
+</ul>
+</div>
+<!-- Frugal Tech Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border-2 border-primary shadow-elevated relative overflow-hidden">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[28px]">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Technology Not Downgraded</h3>
+<p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Frugal engineering is not cheap improvisation. We harness ML-driven surrogate neural models trained on millions of structural stress fields to execute generative topology carve-outs in milliseconds â€” paired with geospatial inventories of real local scrap.
+          </p>
+<ul class="space-y-3 font-body-sm text-on-surface">
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>1.4-second stress prediction with millimeter accuracy</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Continuous substitution engine (pallets, conduit, offcuts)</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Same-day bike/walk pickup routes for neighborhood build sessions</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- The Three-Stage Workflow -->
+<section class="py-20 bg-surface-container-low border-y border-outline-variant" id="the-3-step-flow">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center max-w-xl mx-auto mb-16">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md font-bold">
+          Pocket Gadget Pipeline
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-3">From Idea to Assembled Part in 3 Steps</h2>
+<p class="font-body-md text-on-surface-variant mt-2">
+          A seamless flow tailored for the physical realities of makerspaces and home sheds.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-soft flex flex-col justify-between hover:border-primary transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm font-bold">
+                1
+              </span>
+<span class="font-label-sm bg-surface-container px-2.5 py-1 rounded-full text-primary font-semibold">
+                Input Requirements
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Seed Product &amp; Thresholds</h4>
+<p class="font-body-sm text-on-surface-variant mb-6">
+              Pick a baseline template (workshop stool, wall bracket, water bracket) or drop a basic CAD sketch. Enter your required max load and neighborhood zip code.
+            </p>
+</div>
+<!-- Step 1 Mock Micro-UI -->
+<div class="bg-surface-container-low rounded-xl p-3 border border-outline-variant/60 space-y-2">
+<div class="flex justify-between items-center text-[12px] font-label-md text-on-surface-variant">
+<span>Target Load:</span>
+<span class="font-bold text-on-surface">120 kg (265 lbs)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary w-2/3 h-full rounded-full"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px] text-on-surface-variant">
+<span>Origin: Downtown Maker Hub</span>
+<span class="text-primary font-semibold">Ready</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border-2 border-primary shadow-elevated flex flex-col justify-between relative">
+<div class="absolute -top-3 right-6 bg-secondary-container text-on-secondary-container text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+            AI Magic Core
+          </div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm font-bold">
+                2
+              </span>
+<span class="font-label-sm bg-primary-fixed text-primary px-2.5 py-1 rounded-full font-semibold">
+                AI Redesign &amp; Optimization
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Topology Carve-Out</h4>
+<p class="font-body-sm text-on-surface-variant mb-6">
+              Our surrogate ML model hollows stress voids, computes internal ribbing, and ensures safety factor standard compliance (&gt;2.0x) in under 1.5 seconds.
+            </p>
+</div>
+<!-- Step 2 Mock Micro-UI -->
+<div class="bg-primary-fixed/20 rounded-xl p-3 border border-primary/30 space-y-2">
+<div class="flex justify-between items-center text-[12px] font-label-md">
+<span class="text-primary font-bold">Structural Health</span>
+<span class="text-on-surface font-semibold">Safety Factor 2.24x</span>
+</div>
+<div class="flex items-center space-x-1.5 py-1">
+<span class="h-2 flex-1 bg-primary rounded-full"></span>
+<span class="h-2 flex-1 bg-primary rounded-full"></span>
+<span class="h-2 flex-1 bg-primary rounded-full"></span>
+<span class="h-2 w-6 bg-outline-variant rounded-full"></span>
+</div>
+<p class="text-[11px] text-on-surface-variant">Material reduced by 1.84 kg without yielding.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-soft flex flex-col justify-between hover:border-primary transition-colors">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm font-bold">
+                3
+              </span>
+<span class="font-label-sm bg-surface-container px-2.5 py-1 rounded-full text-primary font-semibold">
+                Local Map Sourcing
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Same-Day Parts Manifest</h4>
+<p class="font-body-sm text-on-surface-variant mb-6">
+              Generates a bill of materials mapped directly to nearby salvage yards, scrap cooperatives, and hardware bins with bike navigation links.
+            </p>
+</div>
+<!-- Step 3 Mock Micro-UI -->
+<div class="bg-surface-container-low rounded-xl p-3 border border-outline-variant/60 space-y-2">
+<div class="flex items-center justify-between text-[12px]">
+<span class="font-label-md text-on-surface font-bold">Hardware Co-op Depot</span>
+<span class="text-primary font-bold">â‚¹12.40 total</span>
+</div>
+<div class="flex items-center space-x-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">directions_bike</span>
+<span>1.2 miles away â€¢ Pick up by 4:00 PM</span>
+</div>
+<div class="w-full bg-surface-container-lowest py-1 text-center rounded border border-outline-variant/40 text-[11px] text-primary font-bold">
+              Export Cut &amp; Sourcing Sheet
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Archetypes / Templates Bento Grid -->
+<section class="py-20 bg-background" id="templates">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="font-label-md uppercase tracking-wider text-primary font-bold">Ready-to-Fabricate Seed Library</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Tested Everyday Blueprints</h2>
+</div>
+<p class="font-body-sm text-on-surface-variant max-w-md mt-2 md:mt-0">
+          Kickstart your project with peer-reviewed frugal designs that community workshops build every day.
+        </p>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Trussed Stool -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-soft hover:shadow-elevated hover:border-primary transition-all duration-200 group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-xl bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[24px]">chair</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm font-bold">
+                -42% Wood Vol
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              Trussed Workshop Stool
+            </h3>
+<p class="font-body-sm text-on-surface-variant mt-2">
+              Lattice leg design utilizing standard 18mm reclaimed pine slats instead of heavy turned dowels.
+            </p>
+<div class="mt-4 pt-4 border-t border-surface-container space-y-2 font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated BOM:</span>
+<span class="font-bold text-on-surface">â‚¹18.75</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Build Time:</span>
+<span class="font-bold text-on-surface">2.5 hours</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tools Needed:</span>
+<span class="text-on-surface">Jigsaw, Drill, Clamps</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-2">
+<button class="w-full py-2.5 px-4 rounded-full bg-surface-container text-primary font-label-lg hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center space-x-1.5">
+<span>Open Blueprint</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Heavy-Duty Wall Bracket -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-soft hover:shadow-elevated hover:border-primary transition-all duration-200 group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-xl bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[24px]">carpenter</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm font-bold">
+                -55% Steel Mass
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              Heavy-Duty Wall Bracket
+            </h3>
+<p class="font-body-sm text-on-surface-variant mt-2">
+              Tension-tie triangulation built from bent discarded construction rebar and scrap angle offcuts.
+            </p>
+<div class="mt-4 pt-4 border-t border-surface-container space-y-2 font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated BOM:</span>
+<span class="font-bold text-on-surface">â‚¹7.20</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Safe Max Load:</span>
+<span class="font-bold text-on-surface">180 kg rating</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tools Needed:</span>
+<span class="text-on-surface">Angle Grinder, Torch / Vise</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-2">
+<button class="w-full py-2.5 px-4 rounded-full bg-surface-container text-primary font-label-lg hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center space-x-1.5">
+<span>Open Blueprint</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Gravity Water Filter Housing -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-soft hover:shadow-elevated hover:border-primary transition-all duration-200 group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 rounded-xl bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[24px]">water_drop</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm font-bold">
+                Zero Toxic Sealants
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              Gravity Water Filter Stand
+            </h3>
+<p class="font-body-sm text-on-surface-variant mt-2">
+              Modular nest utilizing snap-fit recycled food-grade buckets with localized clay candle fittings.
+            </p>
+<div class="mt-4 pt-4 border-t border-surface-container space-y-2 font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated BOM:</span>
+<span class="font-bold text-on-surface">â‚¹12.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Throughput:</span>
+<span class="font-bold text-on-surface">4.5 L / hr</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tools Needed:</span>
+<span class="text-on-surface">Hand Drill, 1/2" Spade bit</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-2">
+<button class="w-full py-2.5 px-4 rounded-full bg-surface-container text-primary font-label-lg hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center space-x-1.5">
+<span>Open Blueprint</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Custom Maker Need Banner -->
+<div class="mt-8 bg-surface-container rounded-2xl p-8 border border-outline-variant flex flex-col md:flex-row items-center justify-between gap-6" id="start">
+<div class="space-y-1 text-center md:text-left">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Have a custom hardware object in mind?</h4>
+<p class="font-body-sm text-on-surface-variant">
+            Type your requirements, paste a CAD link, or describe your local workshop scrap inventory.
+          </p>
+</div>
+<div class="w-full md:w-auto flex-1 max-w-md">
+<div class="flex items-center bg-surface-container-lowest rounded-full p-1.5 border border-outline-variant shadow-sm focus-within:ring-2 focus-within:ring-primary focus-within:border-primary">
+<input class="w-full px-4 py-2 bg-transparent text-on-surface placeholder:text-outline border-none focus:outline-none focus:ring-0 font-body-sm" placeholder="e.g. Folding solar cooker frame under â‚¹15" type="text"/>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label-md hover:bg-primary-container shrink-0 transition-colors">
+              Analyze
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Workshops Interactive Showcase Map Hook -->
+<section class="py-20 bg-surface-container-lowest border-t border-outline-variant" id="workshop-community">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-md font-bold">
+            Decentralized Fabricator Network
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Connecting Your CAD to Neighborhood Hardware</h2>
+<p class="font-body-md text-on-surface-variant leading-relaxed">The best material is the material already within five miles of you. FerbDora's Lab links with community tool libraries, commercial offcut bins, and municipal reuse centers to turn discarded potential into functioning products.</p>
+<div class="space-y-4 pt-2">
+<div class="flex items-start space-x-3.5">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">recycling</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">Material Salvage Index</p>
+<p class="font-body-sm text-on-surface-variant">Live feeds of industrial pallets, conduit offcuts, and sheet metal scrap.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3.5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">build_circle</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">Tool Library Availability</p>
+<p class="font-body-sm text-on-surface-variant">See which local community space has the exact table saw, CNC, or welder ready.</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center space-x-2 text-primary font-label-lg hover:underline" href="#register-workshop">
+<span>Register your local makerspace or salvage yard</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Visual Map & Workshop Hub Mockup -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant shadow-elevated">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Neighborhood Sourcing Radar</span>
+</div>
+<span class="font-label-sm text-on-surface-variant bg-surface-container-lowest px-2.5 py-1 rounded-full border border-outline-variant">
+                Within 3.5 miles
+              </span>
+</div>
+<!-- Stylized Sourcing Cards -->
+<div class="space-y-3">
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant hover:border-primary transition-all flex items-center justify-between">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">warehouse</span>
+</div>
+<div>
+<h5 class="font-label-lg text-on-surface font-semibold">Eastside Timber Salvage Co-op</h5>
+<p class="font-body-sm text-on-surface-variant text-[13px]">12 reclaimed 2x4s â€¢ 4 birch ply offcuts â€¢ â‚¹0.50/ft</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm bg-primary-fixed text-primary px-2.5 py-0.5 rounded-full font-bold">0.6 mi</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Open till 7 PM</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant hover:border-primary transition-all flex items-center justify-between">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div>
+<h5 class="font-label-lg text-on-surface font-semibold">Community Tool Shed #4</h5>
+<p class="font-body-sm text-on-surface-variant text-[13px]">Miter saw, pocket-hole jigs &amp; drill presses free to borrow</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2.5 py-0.5 rounded-full font-bold">1.2 mi</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Volunteer on duty</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant hover:border-primary transition-all flex items-center justify-between">
+<div class="flex items-center space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+</div>
+<div>
+<h5 class="font-label-lg text-on-surface font-semibold">Metals &amp; Conduit Scrapyard</h5>
+<p class="font-body-sm text-on-surface-variant text-[13px]">Galvanized steel pipe drops &amp; leftover structural rebar</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm bg-primary-fixed text-primary px-2.5 py-0.5 rounded-full font-bold">2.1 mi</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Scale open</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Big Call to Action Section -->
+<section class="py-24 bg-primary text-on-primary relative overflow-hidden">
+<!-- Doraemon Pocket Bell Watermark -->
+<div class="absolute -right-16 -bottom-16 w-96 h-96 rounded-full bg-primary-container opacity-40 pointer-events-none"></div>
+<div class="absolute -left-16 -top-16 w-80 h-80 rounded-full bg-primary-container opacity-30 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10 space-y-6">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-on-secondary-container"></span>
+<span>Zero Cost for Grassroots Builders</span>
+</div>
+<h2 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight">
+        Ready to build lighter and cheaper in your local workshop?
+      </h2>
+<p class="font-body-lg text-primary-fixed max-w-2xl mx-auto leading-relaxed">
+        Join hundreds of students, community spaces, and frugal innovators eliminating waste with every design iteration.
+      </p>
+<div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+<a class="inline-flex items-center space-x-2 bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-label-lg font-bold shadow-lg hover:bg-secondary-fixed transition-all active:scale-[0.98]" href="#start"><span class="material-symbols-outlined text-[20px]">emoji_emotions</span><span>Launch FerbDora's Lab</span></a>
+<a class="inline-flex items-center space-x-2 bg-primary-container text-on-primary px-6 py-4 rounded-full font-label-lg hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors" href="#how-it-works">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span>Read Research Paper</span>
+</a>
+</div>
+<p class="font-body-sm text-primary-fixed/80 text-[13px] pt-4">
+        Open Source Core â€¢ ISO 7173 Structural Verification â€¢ CERN Open Hardware Licence compliant
+      </p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-14">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-10 pb-12 border-b border-surface-container">
+<!-- Brand Summary -->
+<div class="md:col-span-2 space-y-4">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center relative">
+<div class="w-5 h-2.5 bg-surface-container-lowest rounded-b-full"></div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-secondary-container rounded-full border border-surface-container-lowest"></span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">FerbDora's Lab</span>
+</div>
+<p class="font-body-sm text-on-surface-variant max-w-sm">
+            The AI Frugal Design Assistant. Turning high-level structural optimization into approachable, local, hands-on fabrication tools.
+          </p>
+<p class="font-label-sm text-outline font-semibold">
+            Tagline: Lighter. Cheaper. Buildable the same day.
+          </p>
+</div>
+<!-- Links Column 1: Frugal Tech -->
+<div class="space-y-3 font-body-sm">
+<p class="font-label-md text-on-surface font-bold uppercase tracking-wider">AFI Frugal Tech</p>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Surrogate ML Modeling</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FEA Stress Calculations</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">ISO 7173 Compliance Sheets</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Alternative Material Matrices</a></li>
+</ul>
+</div>
+<!-- Links Column 2: Maker Ecosystem -->
+<div class="space-y-3 font-body-sm">
+<p class="font-label-md text-on-surface font-bold uppercase tracking-wider">Makers &amp; Sourcing</p>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Scrap Yards Map Directory</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tool Library Partner Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Community Workshop Roster</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cut List Generation</a></li>
+</ul>
+</div>
+<!-- Links Column 3: Open Standards -->
+<div class="space-y-3 font-body-sm">
+<p class="font-label-md text-on-surface font-bold uppercase tracking-wider">Open Source</p>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">CERN Open Hardware (OHL)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">GitHub Repository</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Grassroots Maker Network</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Documentation &amp; API</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-body-sm text-[13px] gap-4">
+<p>Â© 2025 FerbDora's Lab. Dedicated to accessible grassroots engineering.</p>
+<div class="flex space-x-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Open Data Guidelines</a>
+<a class="hover:text-primary transition-colors" href="#">Safety Disclaimers</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
