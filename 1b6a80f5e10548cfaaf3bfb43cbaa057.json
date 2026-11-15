@@ -1,0 +1,190 @@
+﻿{
+    "screenshot":  {
+                       "name":  "projects/369445741058905316/screens/1b6a80f5e10548cfaaf3bfb43cbaa057/fileEntries/screenshot",
+                       "downloadUrl":  "https://stitch.googleapis.com/v1/projects/369445741058905316/files/screenshot_0006604cca72f6d6073adcb0580522a9:download",
+                       "mimeType":  "image/png"
+                   },
+    "id":  "1b6a80f5e10548cfaaf3bfb43cbaa057",
+    "generatedBy":  "interactive_ui_controller",
+    "width":  "1376",
+    "height":  "768",
+    "title":  "A lightweight 3D-printed and laser-cut frugal robotic car chassis prototype resting on a maker workshop bench, sculpted hollow organic truss geometry with generative topology lattice cutouts, blue generative design stress highlights, robotic wheels with DC motors, wires, sleek engineering DIY maker prototype, photorealistic studio lighting",
+    "prompt":  "A lightweight 3D-printed and laser-cut frugal robotic car chassis prototype resting on a maker workshop bench, sculpted hollow organic truss geometry with generative topology lattice cutouts, blue generative design stress highlights, robotic wheels with DC motors, wires, sleek engineering DIY maker prototype, photorealistic studio lighting",
+    "name":  "projects/369445741058905316/screens/1b6a80f5e10548cfaaf3bfb43cbaa057",
+    "theme":  {
+
+              },
+    "screenType":  "IMAGE",
+    "screenMetadata":  {
+                           "agentType":  "PRO_AGENT",
+                           "status":  "COMPLETE"
+                       },
+    "designSystem":  {
+                         "name":  "assets/e99308b0a9294d288c1515d724568572",
+                         "designSystem":  {
+                                              "displayName":  "Pocket Studio",
+                                              "styleGuidelines":  "## Brand \u0026 Style\n\nThis design system powers a lightweight, AI-driven frugal design copilot for grassroots inventors, students, tinkerers, and community workshops. Rooted in the principle of radical resourcefulness—\"Lighter. Cheaper. Buildable the same day.\"—the interface steers clear of intimidating, dense, legacy CAD/CAM tooling. Instead, it invites exploration with an optimistic, tactile, and highly accessible aesthetic.\n\nThe visual style blends **Modern Soft Tactile** with **Humanist Minimalism**:\n- **Optimistic \u0026 Approachable:** Bright sky tones paired with warm, cheerful bell-yellow accents make structural engineering and bill-of-materials optimization feel as welcoming as a neighborhood maker fair.\n- **Utilitarian Clarity:** High readability, clean line-drawn visual aids, chunked progressive steppers, and generous touch targets eliminate visual friction during hands-on workshop work.\n- **Physical Metaphor:** Elevated card surfaces, tactile buttons, and clear modular segments emulate physical project trays and modular build boards.\n\n## Layout \u0026 Spacing\n\nThe layout model is built upon a flexible 12-column responsive fluid grid with generous margins to emphasize calm focus:\n\n- **Desktop (1024px+):** 12 columns with `2.5rem` outer margins and `1.5rem` gutters. The canvas splits between an active design inspector/stepper on the left (7 columns) and a real-time parts manifest/cost ledger on the right (5 columns).\n- **Tablet (768px - 1023px):** 8 columns, `1.5rem` margins, `1rem` gutters. Panels stack into collapsible viewports with quick tabs for easy handoff between workbench and screen.\n- **Mobile (\u003c 768px):** 4 columns with `1rem` margins and `1rem` gutters. Workflows transition to single-column vertical cards with a fixed bottom action bar for primary stepper milestones.\n- **Padding Philosophy:** Components prioritize comfortable touch targets (minimum 44px) and open interior spacing (`space-md` to `space-lg`) to prevent mis-taps when wearing workshop gloves.\n\n## Elevation \u0026 Depth\n\nVisual hierarchy uses **tonal layer stepping** paired with **soft ambient shadows** tinted with navy-slate to evoke natural daylight on a clean work surface.\n\n- **Base Canvas:** Pale cloud slate (`#F8FAFC`), giving a clean backdrop that reduces eye strain under fluorescent bench lighting.\n- **Surface Level 1 (Work Cards \u0026 Containers):** Pure crisp white (`#FFFFFF`) with a delicate bounding border (`1px solid #E2E8F0`) and an ambient, low-contrast drop shadow: `0 4px 16px -2px rgba(15, 23, 42, 0.05)`.\n- **Surface Level 2 (Selected Cards \u0026 Floating Toolbars):** Raised white surfaces with double-layer soft shadows: `0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04)`.\n- **Surface Level 3 (Modals, Overlays \u0026 Drawers):** High-focus floating sheets using `0 20px 32px -8px rgba(15, 23, 42, 0.12)` with a translucent backdrop blur (`rgba(15, 23, 42, 0.4)` + `blur(8px)`).\n- **Interactive Press States:** Elevated surfaces compress on click/tap (`transform: translateY(2px)` and reduced shadow depth), providing immediate, mechanical tactile confirmation.\n\n## Components\n\n### Buttons\n- **Primary (\"Optimize Design\", \"Export Cut List\"):** Pill-shaped, Sky Blue background (`#0284C7`), bold white text, subtle gradient gloss from top edge, and a soft blue glow on hover (`box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35)`). Active state applies a slight downward translation.\n- **Secondary (\"Alternative Materials\"):** Pill-shaped, crisp white background, `1.5px` border in `#E2E8F0`, slate-charcoal text (`#334155`). Hover introduces `#F1F5F9` background tint.\n- **Accent Action (\"Build Today\"):** Warm bell-yellow fill (`#F59E0B`), dark slate text (`#0F172A`), designed to emphasize the single quickest path to immediate fabrication.\n\n### Stepper Progress Bar (1. Input -\u003e 2. Redesign -\u003e 3. Source)\n- **Active Step:** Pill container filled with primary blue, white icon, and bold step label.\n- **Completed Step:** Mint green surface (`#DCFCE7`) with an emerald checkmark icon (`#10B981`).\n- **Connecting Tracks:** Thick 4px rounded track lines in slate (`#E2E8F0`), transitioning to solid sky blue as steps finalize.\n\n### Cards \u0026 Comparison Tiles\n- **Structure:** Clean white cards with `1.5rem` inner padding and `rounded-2xl` corners.\n- **Frugal Delta Header:** Displays top-line savings badges (e.g., \"-40% Weight\", \"$4.20 Total Cost\") using soft mint green or yellow pill tags pinned to the upper-right corner.\n- **Hover/Selection:** Interactive cards transition border color to `#0EA5E9` with an outward micro-scale (`scale-[1.015]`).\n\n### Chips \u0026 Badges\n- **Material Tags (e.g., \"Scrap Plywood\", \"3D Print (PLA)\", \"Zip-Ties\"):** Pill-shaped, light neutral fill (`#F1F5F9`), `#334155` text, and a clean 16px icon prefix.\n- **\"Build Today\" Badges:** Vivid emerald green tint (`#DCFCE7`), text `#065F46`, paired with a small lightning bolt or check icon.\n\n### Input Fields \u0026 Steppers\n- **Text Inputs \u0026 Parameter Sliders:** Pill-styled input fields with a soft inset shadow, `#F8FAFC` background, and `1.5px` border that blooms into `#0EA5E9` with a subtle focus ring (`ring-4 ring-sky-100`).\n- **Numeric Scrubbers:** Workshop-friendly large `+` and `-` circular buttons flanking parameter numbers to allow easy one-handed tuning on a tablet.\n\n### Lists \u0026 Bills of Materials (BOM)\n- Grouped row items separated by soft dividers (`#F1F5F9`).\n- Each row includes a checkbox, material name, cost per unit, local hardware-store availability status, and a quick swap button for frugal substitutions.",
+                                              "theme":  {
+                                                            "colorMode":  "LIGHT",
+                                                            "font":  "OUTFIT",
+                                                            "roundness":  "ROUND_FULL",
+                                                            "customColor":  "#0284c7",
+                                                            "headlineFont":  "OUTFIT",
+                                                            "bodyFont":  "PLUS_JAKARTA_SANS",
+                                                            "labelFont":  "PLUS_JAKARTA_SANS",
+                                                            "namedColors":  {
+                                                                                "on_tertiary":  "#ffffff",
+                                                                                "on_secondary":  "#ffffff",
+                                                                                "surface_variant":  "#dae2fd",
+                                                                                "primary_fixed":  "#cce5ff",
+                                                                                "surface":  "#faf8ff",
+                                                                                "surface_container":  "#eaedff",
+                                                                                "on_primary_fixed_variant":  "#004b73",
+                                                                                "surface_tint":  "#006398",
+                                                                                "outline":  "#707881",
+                                                                                "secondary_fixed_dim":  "#ffb95f",
+                                                                                "tertiary_fixed":  "#ffdad7",
+                                                                                "secondary_fixed":  "#ffddb8",
+                                                                                "on_tertiary_fixed_variant":  "#930013",
+                                                                                "secondary":  "#855300",
+                                                                                "inverse_primary":  "#93ccff",
+                                                                                "tertiary":  "#b61722",
+                                                                                "on_surface_variant":  "#3f4850",
+                                                                                "on_background":  "#131b2e",
+                                                                                "on_primary":  "#ffffff",
+                                                                                "outline_variant":  "#bfc7d2",
+                                                                                "tertiary_container":  "#da3437",
+                                                                                "on_error_container":  "#93000a",
+                                                                                "on_primary_fixed":  "#001d31",
+                                                                                "primary_fixed_dim":  "#93ccff",
+                                                                                "on_surface":  "#131b2e",
+                                                                                "inverse_surface":  "#283044",
+                                                                                "surface_bright":  "#faf8ff",
+                                                                                "primary":  "#006194",
+                                                                                "error":  "#ba1a1a",
+                                                                                "on_secondary_fixed_variant":  "#653e00",
+                                                                                "surface_dim":  "#d2d9f4",
+                                                                                "surface_container_highest":  "#dae2fd",
+                                                                                "on_primary_container":  "#fdfcff",
+                                                                                "on_error":  "#ffffff",
+                                                                                "surface_container_low":  "#f2f3ff",
+                                                                                "error_container":  "#ffdad6",
+                                                                                "inverse_on_surface":  "#eef0ff",
+                                                                                "on_tertiary_container":  "#fffbff",
+                                                                                "tertiary_fixed_dim":  "#ffb3ad",
+                                                                                "on_secondary_fixed":  "#2a1700",
+                                                                                "on_secondary_container":  "#684000",
+                                                                                "background":  "#faf8ff",
+                                                                                "surface_container_high":  "#e2e7ff",
+                                                                                "on_tertiary_fixed":  "#410004",
+                                                                                "secondary_container":  "#fea619",
+                                                                                "primary_container":  "#007bb9",
+                                                                                "surface_container_lowest":  "#ffffff"
+                                                                            },
+                                                            "designMd":  "---\nname: Pocket Studio\ncolors:\n  surface: \u0027#faf8ff\u0027\n  surface-dim: \u0027#d2d9f4\u0027\n  surface-bright: \u0027#faf8ff\u0027\n  surface-container-lowest: \u0027#ffffff\u0027\n  surface-container-low: \u0027#f2f3ff\u0027\n  surface-container: \u0027#eaedff\u0027\n  surface-container-high: \u0027#e2e7ff\u0027\n  surface-container-highest: \u0027#dae2fd\u0027\n  on-surface: \u0027#131b2e\u0027\n  on-surface-variant: \u0027#3f4850\u0027\n  inverse-surface: \u0027#283044\u0027\n  inverse-on-surface: \u0027#eef0ff\u0027\n  outline: \u0027#707881\u0027\n  outline-variant: \u0027#bfc7d2\u0027\n  surface-tint: \u0027#006398\u0027\n  primary: \u0027#006194\u0027\n  on-primary: \u0027#ffffff\u0027\n  primary-container: \u0027#007bb9\u0027\n  on-primary-container: \u0027#fdfcff\u0027\n  inverse-primary: \u0027#93ccff\u0027\n  secondary: \u0027#855300\u0027\n  on-secondary: \u0027#ffffff\u0027\n  secondary-container: \u0027#fea619\u0027\n  on-secondary-container: \u0027#684000\u0027\n  tertiary: \u0027#b61722\u0027\n  on-tertiary: \u0027#ffffff\u0027\n  tertiary-container: \u0027#da3437\u0027\n  on-tertiary-container: \u0027#fffbff\u0027\n  error: \u0027#ba1a1a\u0027\n  on-error: \u0027#ffffff\u0027\n  error-container: \u0027#ffdad6\u0027\n  on-error-container: \u0027#93000a\u0027\n  primary-fixed: \u0027#cce5ff\u0027\n  primary-fixed-dim: \u0027#93ccff\u0027\n  on-primary-fixed: \u0027#001d31\u0027\n  on-primary-fixed-variant: \u0027#004b73\u0027\n  secondary-fixed: \u0027#ffddb8\u0027\n  secondary-fixed-dim: \u0027#ffb95f\u0027\n  on-secondary-fixed: \u0027#2a1700\u0027\n  on-secondary-fixed-variant: \u0027#653e00\u0027\n  tertiary-fixed: \u0027#ffdad7\u0027\n  tertiary-fixed-dim: \u0027#ffb3ad\u0027\n  on-tertiary-fixed: \u0027#410004\u0027\n  on-tertiary-fixed-variant: \u0027#930013\u0027\n  background: \u0027#faf8ff\u0027\n  on-background: \u0027#131b2e\u0027\n  surface-variant: \u0027#dae2fd\u0027\ntypography:\n  display:\n    fontFamily: Outfit\n    fontSize: 48px\n    fontWeight: \u0027700\u0027\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-mobile:\n    fontFamily: Outfit\n    fontSize: 36px\n    fontWeight: \u0027700\u0027\n    lineHeight: 44px\n    letterSpacing: -0.015em\n  headline-lg:\n    fontFamily: Outfit\n    fontSize: 32px\n    fontWeight: \u0027600\u0027\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Outfit\n    fontSize: 26px\n    fontWeight: \u0027600\u0027\n    lineHeight: 34px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Outfit\n    fontSize: 24px\n    fontWeight: \u0027600\u0027\n    lineHeight: 32px\n  headline-sm:\n    fontFamily: Outfit\n    fontSize: 20px\n    fontWeight: \u0027600\u0027\n    lineHeight: 28px\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: \u0027400\u0027\n    lineHeight: 28px\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: 24px\n  body-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: \u0027400\u0027\n    lineHeight: 20px\n  label-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: \u0027600\u0027\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: \u0027600\u0027\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 11px\n    fontWeight: \u0027700\u0027\n    lineHeight: 14px\n    letterSpacing: 0.03em\nrounded:\n  sm: 0.5rem\n  DEFAULT: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 3rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  gutter-mobile: 1rem\n  margin: 2rem\n  margin-mobile: 1rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand \u0026 Style\n\nThis design system powers a lightweight, AI-driven frugal design copilot for grassroots inventors, students, tinkerers, and community workshops. Rooted in the principle of radical resourcefulness—\"Lighter. Cheaper. Buildable the same day.\"—the interface steers clear of intimidating, dense, legacy CAD/CAM tooling. Instead, it invites exploration with an optimistic, tactile, and highly accessible aesthetic.\n\nThe visual style blends **Modern Soft Tactile** with **Humanist Minimalism**:\n- **Optimistic \u0026 Approachable:** Bright sky tones paired with warm, cheerful bell-yellow accents make structural engineering and bill-of-materials optimization feel as welcoming as a neighborhood maker fair.\n- **Utilitarian Clarity:** High readability, clean line-drawn visual aids, chunked progressive steppers, and generous touch targets eliminate visual friction during hands-on workshop work.\n- **Physical Metaphor:** Elevated card surfaces, tactile buttons, and clear modular segments emulate physical project trays and modular build boards.\n\n## Colors\n\nThe system uses a luminous, friendly palette anchored by sky blues, bright brass yellows, and crisp surfaces to reflect light, clarity, and rapid inventiveness.\n\n### Roles and Application\n- **Primary (`#0284C7` / `#0EA5E9`):** Represents generative optimization, active stepper routes, primary calls to action, and core navigational waypoints.\n- **Secondary (`#F59E0B` / `#FBBF24`):** The signature workshop accent. Used for tool-tip highlights, hackable tips, cost-saving summaries, and celebratory milestones.\n- **Tertiary (`#EF4444`):** The alert and high-energy accent. Reserved strictly for structural warnings, stock-out notices, hot-wire/safety alerts, and critical actions.\n- **Neutral (`#0F172A` / `#334155` / `#64748B`):** Deep ink-slate tones provide grounded contrast across body text and diagrams without the harshness of pure black.\n- **Surfaces (`#FFFFFF`, `#F8FAFC`, `#F1F5F9`):** Soft cloud canvas layers create separation between ambient workspace and actionable modular cards.\n- **Semantic Green (`#10B981` / `#DCFCE7`):** Signals \"Buildable Today\" badges, recycled material feasibility, and verified workshop tool compatibility.\n\n## Typography\n\nThe typographic hierarchy pairs **Outfit** for headlines with **Plus Jakarta Sans** for body and metadata.\n\n- **Headlines (Outfit):** Warm, geometric, and open-countered. It brings a cheerful, modern character to build steps, material titles, and metrics without sacrificing authority.\n- **Body \u0026 Labels (Plus Jakarta Sans):** Highly legible at all sizes, even on oil-smudged tablet screens or workshop mobile devices. The rounded letterforms maintain friendly informality while delivering clear assembly instructions and cut lists.\n- **Metric Numbers:** For savings percentages, cost estimates, and assembly timers, use `headline-lg` or `display` rendered in tabular numbers (`font-variant-numeric: tabular-nums`) to ensure fast scanning during iterative design comparisons.\n\n## Layout \u0026 Spacing\n\nThe layout model is built upon a flexible 12-column responsive fluid grid with generous margins to emphasize calm focus:\n\n- **Desktop (1024px+):** 12 columns with `2.5rem` outer margins and `1.5rem` gutters. The canvas splits between an active design inspector/stepper on the left (7 columns) and a real-time parts manifest/cost ledger on the right (5 columns).\n- **Tablet (768px - 1023px):** 8 columns, `1.5rem` margins, `1rem` gutters. Panels stack into collapsible viewports with quick tabs for easy handoff between workbench and screen.\n- **Mobile (\u003c 768px):** 4 columns with `1rem` margins and `1rem` gutters. Workflows transition to single-column vertical cards with a fixed bottom action bar for primary stepper milestones.\n- **Padding Philosophy:** Components prioritize comfortable touch targets (minimum 44px) and open interior spacing (`space-md` to `space-lg`) to prevent mis-taps when wearing workshop gloves.\n\n## Elevation \u0026 Depth\n\nVisual hierarchy uses **tonal layer stepping** paired with **soft ambient shadows** tinted with navy-slate to evoke natural daylight on a clean work surface.\n\n- **Base Canvas:** Pale cloud slate (`#F8FAFC`), giving a clean backdrop that reduces eye strain under fluorescent bench lighting.\n- **Surface Level 1 (Work Cards \u0026 Containers):** Pure crisp white (`#FFFFFF`) with a delicate bounding border (`1px solid #E2E8F0`) and an ambient, low-contrast drop shadow: `0 4px 16px -2px rgba(15, 23, 42, 0.05)`.\n- **Surface Level 2 (Selected Cards \u0026 Floating Toolbars):** Raised white surfaces with double-layer soft shadows: `0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04)`.\n- **Surface Level 3 (Modals, Overlays \u0026 Drawers):** High-focus floating sheets using `0 20px 32px -8px rgba(15, 23, 42, 0.12)` with a translucent backdrop blur (`rgba(15, 23, 42, 0.4)` + `blur(8px)`).\n- **Interactive Press States:** Elevated surfaces compress on click/tap (`transform: translateY(2px)` and reduced shadow depth), providing immediate, mechanical tactile confirmation.\n\n## Shapes\n\nThe interface embraces a bulbous, pill-infused geometry that feels inherently welcoming, safe, and modern. \n\n- **Outer Shells \u0026 Cards:** Standard modules adopt `rounded-2xl` (1rem to 1.5rem) to evoke soft physical cases and rounded hardware enclosures.\n- **Interactive Controls:** Buttons, chips, search fields, and status indicators default to complete pill outlines (`rounded-full` / \u003e 2rem), reinforcing a friendly, approachable signature.\n- **Internal Nested Elements:** Media frames, sub-containers, and visual diagrams inherit proportional corner rounding (half the parent radius) to preserve internal visual harmony.\n\n## Components\n\n### Buttons\n- **Primary (\"Optimize Design\", \"Export Cut List\"):** Pill-shaped, Sky Blue background (`#0284C7`), bold white text, subtle gradient gloss from top edge, and a soft blue glow on hover (`box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35)`). Active state applies a slight downward translation.\n- **Secondary (\"Alternative Materials\"):** Pill-shaped, crisp white background, `1.5px` border in `#E2E8F0`, slate-charcoal text (`#334155`). Hover introduces `#F1F5F9` background tint.\n- **Accent Action (\"Build Today\"):** Warm bell-yellow fill (`#F59E0B`), dark slate text (`#0F172A`), designed to emphasize the single quickest path to immediate fabrication.\n\n### Stepper Progress Bar (1. Input -\u003e 2. Redesign -\u003e 3. Source)\n- **Active Step:** Pill container filled with primary blue, white icon, and bold step label.\n- **Completed Step:** Mint green surface (`#DCFCE7`) with an emerald checkmark icon (`#10B981`).\n- **Connecting Tracks:** Thick 4px rounded track lines in slate (`#E2E8F0`), transitioning to solid sky blue as steps finalize.\n\n### Cards \u0026 Comparison Tiles\n- **Structure:** Clean white cards with `1.5rem` inner padding and `rounded-2xl` corners.\n- **Frugal Delta Header:** Displays top-line savings badges (e.g., \"-40% Weight\", \"$4.20 Total Cost\") using soft mint green or yellow pill tags pinned to the upper-right corner.\n- **Hover/Selection:** Interactive cards transition border color to `#0EA5E9` with an outward micro-scale (`scale-[1.015]`).\n\n### Chips \u0026 Badges\n- **Material Tags (e.g., \"Scrap Plywood\", \"3D Print (PLA)\", \"Zip-Ties\"):** Pill-shaped, light neutral fill (`#F1F5F9`), `#334155` text, and a clean 16px icon prefix.\n- **\"Build Today\" Badges:** Vivid emerald green tint (`#DCFCE7`), text `#065F46`, paired with a small lightning bolt or check icon.\n\n### Input Fields \u0026 Steppers\n- **Text Inputs \u0026 Parameter Sliders:** Pill-styled input fields with a soft inset shadow, `#F8FAFC` background, and `1.5px` border that blooms into `#0EA5E9` with a subtle focus ring (`ring-4 ring-sky-100`).\n- **Numeric Scrubbers:** Workshop-friendly large `+` and `-` circular buttons flanking parameter numbers to allow easy one-handed tuning on a tablet.\n\n### Lists \u0026 Bills of Materials (BOM)\n- Grouped row items separated by soft dividers (`#F1F5F9`).\n- Each row includes a checkbox, material name, cost per unit, local hardware-store availability status, and a quick swap button for frugal substitutions.",
+                                                            "colorVariant":  "FIDELITY",
+                                                            "overridePrimaryColor":  "#0284c7",
+                                                            "overrideSecondaryColor":  "#f59e0b",
+                                                            "overrideTertiaryColor":  "#ef4444",
+                                                            "overrideNeutralColor":  "#0f172a",
+                                                            "spacingScale":  2,
+                                                            "typography":  {
+                                                                               "body-lg":  {
+                                                                                               "fontFamily":  "Plus Jakarta Sans",
+                                                                                               "fontSize":  "18px",
+                                                                                               "fontWeight":  "400",
+                                                                                               "lineHeight":  "28px"
+                                                                                           },
+                                                                               "label-md":  {
+                                                                                                "fontFamily":  "Plus Jakarta Sans",
+                                                                                                "fontSize":  "12px",
+                                                                                                "fontWeight":  "600",
+                                                                                                "lineHeight":  "16px",
+                                                                                                "letterSpacing":  "0.02em"
+                                                                                            },
+                                                                               "body-sm":  {
+                                                                                               "fontFamily":  "Plus Jakarta Sans",
+                                                                                               "fontSize":  "14px",
+                                                                                               "fontWeight":  "400",
+                                                                                               "lineHeight":  "20px"
+                                                                                           },
+                                                                               "headline-lg-mobile":  {
+                                                                                                          "fontFamily":  "Outfit",
+                                                                                                          "fontSize":  "26px",
+                                                                                                          "fontWeight":  "600",
+                                                                                                          "lineHeight":  "34px",
+                                                                                                          "letterSpacing":  "-0.01em"
+                                                                                                      },
+                                                                               "headline-sm":  {
+                                                                                                   "fontFamily":  "Outfit",
+                                                                                                   "fontSize":  "20px",
+                                                                                                   "fontWeight":  "600",
+                                                                                                   "lineHeight":  "28px"
+                                                                                               },
+                                                                               "headline-lg":  {
+                                                                                                   "fontFamily":  "Outfit",
+                                                                                                   "fontSize":  "32px",
+                                                                                                   "fontWeight":  "600",
+                                                                                                   "lineHeight":  "40px",
+                                                                                                   "letterSpacing":  "-0.01em"
+                                                                                               },
+                                                                               "display-mobile":  {
+                                                                                                      "fontFamily":  "Outfit",
+                                                                                                      "fontSize":  "36px",
+                                                                                                      "fontWeight":  "700",
+                                                                                                      "lineHeight":  "44px",
+                                                                                                      "letterSpacing":  "-0.015em"
+                                                                                                  },
+                                                                               "body-md":  {
+                                                                                               "fontFamily":  "Plus Jakarta Sans",
+                                                                                               "fontSize":  "16px",
+                                                                                               "fontWeight":  "400",
+                                                                                               "lineHeight":  "24px"
+                                                                                           },
+                                                                               "headline-md":  {
+                                                                                                   "fontFamily":  "Outfit",
+                                                                                                   "fontSize":  "24px",
+                                                                                                   "fontWeight":  "600",
+                                                                                                   "lineHeight":  "32px"
+                                                                                               },
+                                                                               "label-sm":  {
+                                                                                                "fontFamily":  "Plus Jakarta Sans",
+                                                                                                "fontSize":  "11px",
+                                                                                                "fontWeight":  "700",
+                                                                                                "lineHeight":  "14px",
+                                                                                                "letterSpacing":  "0.03em"
+                                                                                            },
+                                                                               "display":  {
+                                                                                               "fontFamily":  "Outfit",
+                                                                                               "fontSize":  "48px",
+                                                                                               "fontWeight":  "700",
+                                                                                               "lineHeight":  "56px",
+                                                                                               "letterSpacing":  "-0.02em"
+                                                                                           },
+                                                                               "label-lg":  {
+                                                                                                "fontFamily":  "Plus Jakarta Sans",
+                                                                                                "fontSize":  "14px",
+                                                                                                "fontWeight":  "600",
+                                                                                                "lineHeight":  "20px",
+                                                                                                "letterSpacing":  "0.01em"
+                                                                                            }
+                                                                           },
+                                                            "spacing":  {
+                                                                            "gutter-mobile":  "1rem",
+                                                                            "margin":  "2rem",
+                                                                            "space-sm":  "0.5rem",
+                                                                            "margin-mobile":  "1rem",
+                                                                            "space-xs":  "0.25rem",
+                                                                            "gutter":  "1.5rem",
+                                                                            "space-xl":  "2.5rem",
+                                                                            "space-lg":  "1.5rem",
+                                                                            "space-md":  "1rem"
+                                                                        },
+                                                            "headlineFontFamily":  "Outfit",
+                                                            "bodyFontFamily":  "Plus Jakarta Sans",
+                                                            "labelFontFamily":  "Plus Jakarta Sans"
+                                                        }
+                                          },
+                         "version":  "1"
+                     }
+}

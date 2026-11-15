@@ -1,0 +1,180 @@
+﻿{
+    "htmlCode":  {
+                     "name":  "projects/369445741058905316/screens/880645f668f34529b87fd04789bd35af/fileEntries/html",
+                     "downloadUrl":  "https://stitch.googleapis.com/v1/projects/369445741058905316/files/880645f668f34529b87fd04789bd35af:download",
+                     "mimeType":  "text/html"
+                 },
+    "id":  "880645f668f34529b87fd04789bd35af",
+    "generatedBy":  "prototype_v2_agent",
+    "width":  "1280",
+    "height":  "1024",
+    "title":  "FerbDora\u0027s Lab - Frugal Design Assistant",
+    "name":  "projects/369445741058905316/screens/880645f668f34529b87fd04789bd35af",
+    "theme":  {
+
+              },
+    "deviceType":  "DESKTOP",
+    "screenType":  "PROTOTYPE_V2",
+    "screenMetadata":  {
+                           "agentType":  "PRO_AGENT",
+                           "status":  "COMPLETE",
+                           "prototypeSpec":  {
+                                                 "initScreenId":  "6d3f86d877274f7394a9c338c0d91eef",
+                                                 "screenIds":  [
+                                                                   "28cf013860714575b1fb733a56b72e44",
+                                                                   "6d3f86d877274f7394a9c338c0d91eef",
+                                                                   "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                   "d2c2e438acab43f8b17b27f011cf773f"
+                                                               ],
+                                                 "links":  {
+                                                               "d2c2e438acab43f8b17b27f011cf773f":  {
+                                                                                                        "links":  [
+                                                                                                                      {
+                                                                                                                          "xpath":  "//header//div[contains(@class, \u0027flex items-center gap-3\u0027)]",
+                                                                                                                          "targetScreenId":  "6d3f86d877274f7394a9c338c0d91eef",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//a[contains(@title, \u0027Back to 3D Inspection\u0027)]",
+                                                                                                                          "targetScreenId":  "28cf013860714575b1fb733a56b72e44",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(., \u0027Step 1: Input Requirements\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(., \u0027Step 2: AI Redesign\u0027)]",
+                                                                                                                          "targetScreenId":  "28cf013860714575b1fb733a56b72e44",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//header//button[contains(., \u0027New Design\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      }
+                                                                                                                  ]
+                                                                                                    },
+                                                               "28cf013860714575b1fb733a56b72e44":  {
+                                                                                                        "links":  [
+                                                                                                                      {
+                                                                                                                          "xpath":  "//header//a[contains(@href, \u0027#\u0027) and .//span[contains(text(), \u0027FerbDora\u0027)]] | //header//div[contains(@class, \u0027flex items-center gap-3\u0027)]",
+                                                                                                                          "targetScreenId":  "6d3f86d877274f7394a9c338c0d91eef",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(., \u00271. Input Target\u0027) and contains(@class, \u0027rounded-full\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//button[contains(., \u0027Tweak Parameters\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(., \u00273. Local Source\u0027) and contains(@class, \u0027rounded-full\u0027)]",
+                                                                                                                          "targetScreenId":  "d2c2e438acab43f8b17b27f011cf773f",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//button[contains(., \u0027Find Where to Buy Nearby\u0027)]",
+                                                                                                                          "targetScreenId":  "d2c2e438acab43f8b17b27f011cf773f",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//header//button[contains(., \u0027New Design\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      }
+                                                                                                                  ]
+                                                                                                    },
+                                                               "7fb34d2007be4fba831f76f06ef75cb2":  {
+                                                                                                        "links":  [
+                                                                                                                      {
+                                                                                                                          "xpath":  "//header//div[contains(@class, \u0027flex items-center gap-2.5\u0027)]",
+                                                                                                                          "targetScreenId":  "6d3f86d877274f7394a9c338c0d91eef",
+                                                                                                                          "transition":  "PUSH_BACK",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//button[contains(., \u0027Optimize My Design\u0027)]",
+                                                                                                                          "targetScreenId":  "28cf013860714575b1fb733a56b72e44",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(., \u0027Step 2\u0027) and .//p[contains(text(), \u0027AI Redesign\u0027)]]",
+                                                                                                                          "targetScreenId":  "28cf013860714575b1fb733a56b72e44",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(., \u0027Step 3\u0027) and .//p[contains(text(), \u0027Local Source\u0027)]]",
+                                                                                                                          "targetScreenId":  "d2c2e438acab43f8b17b27f011cf773f",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//span[contains(text(), \u0027View Map\u0027)]",
+                                                                                                                          "targetScreenId":  "d2c2e438acab43f8b17b27f011cf773f",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      }
+                                                                                                                  ]
+                                                                                                    },
+                                                               "6d3f86d877274f7394a9c338c0d91eef":  {
+                                                                                                        "links":  [
+                                                                                                                      {
+                                                                                                                          "xpath":  "//header//a[contains(., \u0027New Design\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//a[contains(., \u0027Start Designing Free\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//a[contains(., \u0027Launch FerbDora\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//button[contains(., \u0027Analyze\u0027)]",
+                                                                                                                          "targetScreenId":  "7fb34d2007be4fba831f76f06ef75cb2",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "xpath":  "//div[contains(@class, \u0027rounded-2xl\u0027) and .//h3[contains(text(), \u0027Robotic Car Chassis\u0027)]]//button[contains(., \u0027Open Blueprint\u0027)]",
+                                                                                                                          "targetScreenId":  "28cf013860714575b1fb733a56b72e44",
+                                                                                                                          "transition":  "PUSH",
+                                                                                                                          "state":  "default"
+                                                                                                                      }
+                                                                                                                  ]
+                                                                                                    }
+                                                           },
+                                                 "states":  [
+                                                                {
+                                                                    "name":  "default"
+                                                                }
+                                                            ]
+                                             }
+                       }
+}
